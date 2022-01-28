@@ -53,3 +53,16 @@ pypi_test:
 
 pypi:
 	@twine upload dist/* -u $(PYPI_USERNAME)
+
+
+# ----------------------------------
+#      move files
+# ----------------------------------
+
+move_notebook:
+	@echo 'Moving last downloaded notebook in the notebook directory'
+	@read -p "Confirm: $$(ls -1t ~/Downloads/*.ipynb | head -n1) " -n 1 -r; \
+        if [[ $$REPLY =~ ^[Yy] ]]; \
+        then \
+            mv ~/Downloads/$$(ls -1t ~/Downloads/*.ipynb | head -n1) notebooks/; \
+				fi
