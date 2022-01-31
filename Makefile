@@ -64,5 +64,5 @@ move_notebook:
 	@read -p "Confirm: $$(ls -1t ~/Downloads/*.ipynb | head -n1) " -n 1 -r; \
         if [[ $$REPLY =~ ^[Yy] ]]; \
         then \
-            mv ~/Downloads/$$(ls -1t ~/Downloads/*.ipynb | head -n1) notebooks/; \
+            mv $$(ls -1t ~/Downloads/*.ipynb | head -n1) notebooks/; \
 				fi

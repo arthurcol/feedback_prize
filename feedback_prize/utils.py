@@ -22,5 +22,5 @@ def get_essay(id,mode='train'):
         txt = file.read()
         return txt
 
-def tryme():
-    return 'fuckoff'
+if __name__ == "__main__":
+    pass
